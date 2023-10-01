@@ -12,12 +12,19 @@
 <div id="header">
  <div class="container">
     <nav>
-        <img src="NAME.PNG" height="50px" width="200px" class="logo">
+        <h2><span>Harini</span>Palanisamy</h2>
+        <!-- <img src="NAME.PNG" height="50px" width="200px" class="logo"> -->
         <ul>
             <li><a href="#">Home</a></li>
             
-            <li><a href="#">Projects</a></li>
+            <li><a href="#portfolio">Projects</a></li>
             <li><a href="C:\Users\user\Desktop\PERSON\contact.html">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- <div class="header-text">
+                <p>Front-End developer</p>
+                <h1>Hi,I'm <span>Harini</span>Palanisamy</h1>
+        
+            </div> -->
 
         </ul>
     </nav>
@@ -32,10 +39,10 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-            <img src="C:\Users\user\Desktop\PERSON\202IT138 HARI IMAGE.JPG "></div>
+            <img src="C:\Users\user\Desktop\HARINI'S PORTFOLIO\images\hari.jpg" ></div>
             <div class="about-col-2">
             <h1 class="sub-title">
-                ABout Me
+                About Me
             </h1>
             <p>
                 I'm an innovative and creative person. It's very clear to me that I enjoy solving problems in different ways and using my creativity to develop new ideas. 
@@ -53,7 +60,7 @@
                     <li> <span>UI</span><br>Designing Web/App Interfaces</li>
                     <li> <span>Artificial Intelligence</span><br>Machine Learning/Deep Learning</li>
                     <li> C</li>
-                    <li> PYTHON</li>
+                    <li>Mern stack</li>
 
                 </ul>
             </div>
@@ -123,7 +130,7 @@ Network,<br>BIT January 2022.
         <p>
             --Used OpenCV and accessed live webcam feed,
 implemented a<br> real-time gender prediction model .
-(Individual)
+
         </p>
         <a href="#"><i class=fas fa-external-link-alt></i></a>
 </div>
@@ -149,13 +156,15 @@ implemented a<br> real-time gender prediction model .
     <a href="hhttps://github.com/HARIRADHI"><i class="fa-brands fa-github"></i></a>
     <a href=""><i class="fa-brands fa-instagram"></i></a>
   </div>
-<a href=C:\Users\user\Desktop\PERSON\202IT138 HARI IMAGE.JPG download  class="btn"> Resume</a>
+  
+    <a href="C:\Users\user\Desktop\HARINI'S PORTFOLIO\HARINI P_202IT138_.pdf"  class="btn btn 2"> Dowmload CV</a></div>
+    <!-- <button type="submit" class="btn btn2">Submit</button> -->
    </div>
 
     <div class="contact-right">
-   <form>
+   <form name="submit-to-google-sheet">
     <input type="text" name="Name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="email" name="Email" placeholder="Your Email" required>
     <textarea name="Message"  rows="6" placeholder="Your message"> </textarea>
     <button type="submit" class="btn btn2">Submit</button>
     
@@ -163,6 +172,9 @@ implemented a<br> real-time gender prediction model .
 
 </div>
    </div>
+ </div>
+ <div class="copyright">
+    <p>Copyright @harini<i class="fas fa-heart"></i></p>
  </div>
 </div>
 
@@ -193,6 +205,16 @@ implemented a<br> real-time gender prediction model .
 
 
 </script>
-
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzgNAi1XTFNCFNBHXwrwQe9dL9s5i49k56wFF0WFrNsdJOcYhgolr2aMIaUtd_gNOX3/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
     </body>
 </html>
